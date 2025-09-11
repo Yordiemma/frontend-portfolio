@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yordanos A — Portfolio</title>
+    <meta
+      name="description"
+      content="Yordanos A — web developer portfolio showcasing projects, skills, education, and client feedback."
+    />
+
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav__logo">Yordanos A.</div>
+      <div class="nav__links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- HERO -->
+      <header id="home" class="hero">
+        <div class="container hero__grid">
+          <div class="hero__media">
+            <img
+              src="images/profile.png"
+              alt="Yordanos portrait"
+              class="hero__img"
+            />
+          </div>
+
+          <div class="hero__text">
+            <h1 class="hero__title">
+              Hey I'm <span class="name">Yordanos A.</span>
+            </h1>
+            <h2 class="hero__line">
+              I'm a <span class="word"><b>Developer</b></span>
+            </h2>
+
+            <p class="hero__lead">
+              I build modern, responsive websites with clean UI and accessible
+              UX. I’m focused on learning and improving every day.
+            </p>
+
+            <div class="hero__icons">
+              <a
+                class="icon"
+                href="https://github.com/Yordiemma"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                class="icon"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                class="icon"
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                class="icon"
+                href="https://x.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X/Twitter"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+
+            <a
+              class="btn"
+              href="./Yordanos-CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Download CV</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="container">
+          <h2 class="sec__title">About</h2>
+          <div class="card">
+            <p>
+              I’m Yordanos — a front-end developer in training who loves clean
+              UI, accessible UX, and building helpful products. I’ve
+              <strong>completed ALX’s Intro to Software Engineering</strong>
+              (certificate earned). I’m
+              <strong
+                >currently studying Front-End Development at Hyper
+                Island</strong
+              >.
+            </p>
+            <p>
+              I previously studied
+              <strong>Computer Science at University of the People</strong>, and
+              plan to continue my degree in the future. I’m also
+              <strong
+                >learning Introductory Programming in Java at Luleå University
+                of Technology (LTU)</strong
+              >
+              to strengthen my programming foundations.
+            </p>
+            <p class="muted">
+              Goal: become a strong Front-End Developer and complete my Computer
+              Science degree.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section">
+        <div class="container">
+          <h2 class="sec__title">Skills</h2>
+          <div class="chips">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript (Basics)</span>
+            <span class="chip">React</span>
+            <span class="chip">Responsive Design</span>
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">Python</span>
+            <span class="chip">Flask (Basics)</span>
+            <span class="chip">PostgreSQL (Basics)</span>
+            <span class="chip">Java (LTU coursework)</span>
+            <span class="chip">Problem-Solving</span>
+            <span class="chip">Client Communication</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section">
+        <div class="container">
+          <h2 class="sec__title">Projects</h2>
+
+          <div class="grid">
+            <!-- Voice For Her -->
+            <article class="card">
+              <div class="card__head">
+                <h3>Voice For Her</h3>
+                <span class="tag">Project</span>
+              </div>
+              <div class="preview">
+                <img
+                  src="images/voiceForHer.png"
+                  alt="Voice For Her project preview"
+                  loading="lazy"
+                />
+              </div>
+              <div class="actions">
+                <a
+                  class="btn"
+                  href="https://voice-for-her-frontend.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Live Site</a
+                >
+                <a
+                  class="btn-outline"
+                  href="https://github.com/yourusername/voice-for-her"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <!-- Upwork -->
+            <article class="card">
+              <div class="card__head">
+                <h3>Upwork Highlights</h3>
+                <span class="tag">Client feedback</span>
+              </div>
+              <!-- Use contain so the whole screenshot is visible -->
+              <div class="preview preview--contain">
+                <img
+                  src="images/Upwork.png"
+                  alt="Upwork public profile"
+                  loading="lazy"
+                />
+              </div>
+              <div class="actions">
+                <a
+                  class="btn"
+                  href="https://www.upwork.com/freelancers/~0187d08c233b7f0264"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Upwork</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="section">
+        <div class="container">
+          <h2 class="sec__title">Education</h2>
+          <ul class="edu">
+            <li>Hyper Island — Front-End Development (current)</li>
+            <li>ALX — Intro to Software Engineering (1 year)</li>
+            <li>LTU — Introductory Programming in Java (stand-alone)</li>
+            <li>University of the People — Computer Science (~1.5 years)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- HOBBIES -->
+      <section id="hobbies" class="section">
+        <div class="container">
+          <h2 class="sec__title">Hobbies</h2>
+          <div class="chips">
+            <span class="chip">🎨 Poem Writing</span>
+            <span class="chip">📚 Reading</span>
+            <span class="chip">🏊 Swimming</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="container">
+          <h2 class="sec__title">Contact</h2>
+          <div class="card">
+            <p>
+              Email:
+              <a href="mailto:yordanosagafari1@gmail.com"
+                >yordanosagafari1@gmail.com</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 Yordanos A.</p>
+    </footer>
+  </body>
+</html>
