@@ -12,7 +12,7 @@
   --shadow-md: 0 12px 32px rgba(0, 0, 0, .14);
 }
 
-/*  RESET / BASE */
+/*  RESET  */
 * {
   margin: 0;
   padding: 0;
@@ -63,7 +63,7 @@ a {
   color: var(--muted)
 }
 
-/* =================== NAVBAR ===================== */
+/*  NAVBAR  */
 .navbar {
   position: sticky;
   top: 0;
@@ -98,7 +98,7 @@ a {
   color: #5a3300
 }
 
-/* ===================== HERO ===================== */
+/*  HERO  */
 .hero {
   padding-top: clamp(40px, 6vw, 70px)
 }
@@ -252,6 +252,77 @@ a {
   box-shadow: 0 12px 28px rgba(109, 67, 0, .2)
 }
 
+/* About Section */
+#about {
+  padding: 4rem 0;
+}
+
+#about .sec__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+#about .card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Paragraphs inside About */
+#about p {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
+
+#about p.muted {
+  font-style: italic;
+  color: #666;
+}
+
+/* List for internship tasks */
+#about ul {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding: 0;
+}
+
+#about ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  position: relative;
+}
+
+#about ul li::before {
+  content: "•";
+  color: #007acc;
+  /* accent color, change to your brand */
+  font-weight: bold;
+  position: absolute;
+  left: -1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #about .card {
+    padding: 1.5rem;
+  }
+
+  #about .sec__title {
+    font-size: 1.5rem;
+  }
+
+  #about p {
+    font-size: 0.95rem;
+  }
+}
+
 /*  CARDS / LISTS  */
 .card {
   background: rgba(255, 255, 255, .9);
@@ -324,7 +395,7 @@ a {
   margin-bottom: 12px;
 }
 
-/* default: crop nicely to the same height */
+/* crop nicely  */
 .preview img {
   width: 100%;
   aspect-ratio: 16/10;
