@@ -112,45 +112,50 @@
       </header>
 
       <!-- ABOUT -->
+
       <section id="about" class="section">
         <div class="container">
-          <h2 class="sec__title">About</h2>
-          <div class="card">
-            <p>
-              I’m Yordanos — a front-end developer in training who loves clean
-              UI, accessible UX, and building helpful products. I’ve
-              <strong>completed ALX’s Intro to Software Engineering</strong>
-              (certificate earned). I’m
-              <strong
-                >currently studying Front-End Development at Hyper
-                Island</strong
-              >.
-            </p>
+          <div class="about-split">
+            <!-- LEFT SIDE: TEXT -->
+            <div class="about-content">
+              <h2 class="sec__title about-title">About Me</h2>
 
-            <p>
-              I previously studied
-              <strong>Computer Science at University of the People</strong>, and
-              plan to continue my degree in the future. I’m also
-              <strong
-                >learning Introductory Programming in Java at Luleå University
-                of Technology (LTU)</strong
-              >
-              to strengthen my programming foundations.
-            </p>
+              <p>
+                I’m an aspiring Front-End Developer focused on clean UI and
+                accessible UX. I enjoy turning ideas into fast, responsive web
+                experiences.
+              </p>
 
-            <p>
-              Last year, I completed a <em>remote internship at Kurazi</em> as a
-              <strong>Backend PHP Developer</strong>. During this experience I:
-            </p>
-            <ul>
-              <li>Built PHP endpoints and simple CRUD features</li>
-              <li>Worked with JSON APIs and request validation</li>
-              <li>Collaborated asynchronously and wrote clear documentation</li>
-            </ul>
-            <p class="muted">
-              Goal: become a strong Front-End Developer and complete my Computer
-              Science degree.
-            </p>
+              <p>
+                I’ve completed
+                <strong>ALX Intro to Software Engineering</strong> and I’m
+                currently studying
+                <strong>Front-End Development at Hyper Island</strong>. I also
+                strengthened my foundations with Java at <strong>LTU</strong>.
+              </p>
+
+              <p>
+                Previously, I interned remotely as a
+                <strong>Backend PHP Developer</strong> at Kurazi: building
+                endpoints, handling JSON APIs, and writing documentation.
+              </p>
+
+              <div class="about-links">
+                <a class="btn" href="#projects">Go to Portfolio</a>
+                <a
+                  class="btn-outline"
+                  href="https://github.com/Yordiemma"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+
+            <!-- RIGHT SIDE: IMAGE -->
+            <figure class="about-photo">
+              <img src="images/about.png" alt="Yordanos portrait" />
+            </figure>
           </div>
         </div>
       </section>
@@ -159,83 +164,79 @@
       <section id="skills" class="section">
         <div class="container">
           <h2 class="sec__title">Skills</h2>
-          <div class="chips">
-            <span class="chip">HTML</span>
-            <span class="chip">CSS</span>
-            <span class="chip">JavaScript (Basics)</span>
-            <span class="chip">React (Basics)</span>
-            <span class="chip">Responsive Design</span>
-            <span class="chip">Git</span>
-            <span class="chip">GitHub</span>
-            <span class="chip">Python</span>
-            <span class="chip">Flask (Basics)</span>
-            <span class="chip">PostgreSQL (Basics)</span>
-            <span class="chip">Java (LTU coursework)</span>
-            <span class="chip">Problem-Solving</span>
-            <span class="chip">Client Communication</span>
-          </div>
+          <ul class="skills-grid">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript (Basics)</li>
+            <li>php (Basics)</li>
+            <li>(Basics)</li>
+            <li>React (Basics)</li>
+            <li>Responsive Design</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Python</li>
+            <li>Flask (Basics)</li>
+            <li>PostgreSQL (Basics)</li>
+            <li>Java (Basics)</li>
+            <li>Problem-Solving</li>
+            <li>Client Communication</li>
+          </ul>
         </div>
       </section>
 
+      <!-- PROJECTS -->
       <!-- PROJECTS -->
       <section id="projects" class="section">
         <div class="container">
           <h2 class="sec__title">Projects</h2>
 
-          <div class="grid">
+          <div class="projects-grid">
             <!-- Voice For Her -->
-            <article class="card">
-              <div class="card__head">
+            <article class="project-card">
+              <img
+                src="images/1.png"
+                alt="Voice For Her project preview"
+                loading="lazy"
+              />
+              <div class="project-body">
                 <h3>Voice For Her</h3>
-                <span class="tag">Project</span>
-              </div>
-              <div class="preview">
-                <img
-                  src="images/voiceForHer.png"
-                  alt="Voice For Her project preview"
-                  loading="lazy"
-                />
-              </div>
-              <div class="actions">
-                <a
-                  class="btn"
-                  href="https://voice-for-her-frontend.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Live Site</a
-                >
-                <a
-                  class="btn-outline"
-                  href="https://github.com/yourusername/voice-for-her"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub</a
-                >
+                <div class="actions">
+                  <a
+                    class="btn"
+                    href="https://voice-for-her-frontend.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Site</a
+                  >
+                  <a
+                    class="btn-outline"
+                    href="https://github.com/yourusername/voice-for-her"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </div>
               </div>
             </article>
 
             <!-- Upwork -->
-            <article class="card">
-              <div class="card__head">
+            <article class="project-card">
+              <img
+                src="images/2.png"
+                alt="Upwork public profile"
+                loading="lazy"
+              />
+              <div class="project-body">
                 <h3>Upwork Highlights</h3>
-                <span class="tag">Client feedback</span>
-              </div>
-              <!-- Use contain so the whole screenshot is visible -->
-              <div class="preview preview--contain">
-                <img
-                  src="./images/upwork.png"
-                  alt="Upwork public profile"
-                  loading="lazy"
-                />
-              </div>
-              <div class="actions">
-                <a
-                  class="btn"
-                  href="https://www.upwork.com/freelancers/~0187d08c233b7f0264"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >View Upwork</a
-                >
+                <div class="actions">
+                  <a
+                    class="btn"
+                    href="https://www.upwork.com/freelancers/~0187d08c233b7f0264"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >View Upwork</a
+                  >
+                </div>
               </div>
             </article>
           </div>
@@ -246,69 +247,101 @@
       <section id="education" class="section">
         <div class="container">
           <h2 class="sec__title">Education</h2>
-          <ul class="edu">
-            <li>
+
+          <div class="edu-grid">
+            <article class="edu-card">
+              <h3>Hyper Island — Front-End Development (current)</h3>
               <a
+                class="edu-link"
                 href="https://hyperisland.com/programs-and-courses"
                 target="_blank"
                 rel="noopener noreferrer"
+                >View program</a
               >
-                Hyper Island — Front-End Development (current)
-              </a>
-            </li>
-            <li>
+            </article>
+
+            <article class="edu-card">
+              <h3>ALX — Intro to Software Engineering (1 year)</h3>
               <a
-                href="https://alx.training/en/>"
+                class="edu-link"
+                href="https://alx.training/en/"
                 target="_blank"
                 rel="noopener noreferrer"
+                >View program</a
               >
-                ALX — Intro to Software Engineering (1 year)
-              </a>
-            </li>
-            <li>
+            </article>
+
+            <article class="edu-card">
+              <h3>LTU — Introductory Programming in Java (stand-alone)</h3>
               <a
+                class="edu-link"
                 href="https://www.ltu.se/edu/course/D00/D0009E/D0009E-Introductory-Programming-in-Java"
                 target="_blank"
                 rel="noopener noreferrer"
+                >Course page</a
               >
-                LTU — Introductory Programming in Java (stand-alone)
-              </a>
-            </li>
-            <li>
+            </article>
+
+            <article class="edu-card">
+              <h3>University of the People — Computer Science (~1.5 years)</h3>
               <a
+                class="edu-link"
                 href="https://www.uopeople.edu/programs/cs/"
                 target="_blank"
                 rel="noopener noreferrer"
+                >Program</a
               >
-                University of the People — Computer Science (~1.5 years)
-              </a>
-            </li>
-          </ul>
+            </article>
+          </div>
         </div>
       </section>
 
       <!-- HOBBIES -->
       <section id="hobbies" class="section">
         <div class="container">
-          <h2 class="sec__title">Hobbies</h2>
-          <div class="chips">
-            <span class="chip">🎨 Poem Writing</span>
-            <span class="chip">📚 Reading</span>
-            <span class="chip">🏊 Swimming</span>
-          </div>
-        </div>
-      </section>
+          <h2 class="sec__title">My Hobbies</h2>
 
-      <!-- CONTACT -->
-      <section id="contact" class="section">
-        <div class="container">
-          <h2 class="sec__title">Contact Me</h2>
-          <div class="card">
-            <p>
-              <a href="mailto:yordanosagafari1@gmail.com"
-                >yordanosagafari1@gmail.com</a
-              >
-            </p>
+          <div class="hobbies-grid">
+            <!-- Card 1 -->
+            <article class="hobby-card">
+              <div class="hobby-media">
+                <img
+                  src="./images/Book.png"
+                  alt="Reading books"
+                  loading="lazy"
+                />
+              </div>
+              <div class="hobby-body">
+                <h3>Reading</h3>
+                <p>I love reading self-improvement and fiction books.</p>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="hobby-card">
+              <div class="hobby-media">
+                <img
+                  src="./images/poem.png"
+                  alt="Writing poems"
+                  loading="lazy"
+                />
+              </div>
+              <div class="hobby-body">
+                <h3>Poem Writing</h3>
+                <p>I write short poems to express ideas and emotions.</p>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="hobby-card">
+              <div class="hobby-media">
+                <img src="./images/swim.png" alt="Swimming" loading="lazy" />
+              </div>
+              <div class="hobby-body">
+                <h3>Swimming</h3>
+                <p>Helps me relax, stay active, and clear my mind.</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -316,6 +349,53 @@
 
     <!-- FOOTER -->
     <footer class="footer">
+      <div class="container footer__row">
+        <p>© 2025 Yordanos A.</p>
+
+        <div class="footer__icons">
+          <a
+            class="icon"
+            href="https://github.com/Yordiemma"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a
+            class="icon"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a
+            class="icon"
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a
+            class="icon"
+            href="https://x.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X/Twitter"
+          >
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
+
+        <a href="#home" class="footer__top" aria-label="Back to top"
+          >↑ Back to top</a
+        >
+      </div>
+
       <p>© 2025 Yordanos A.</p>
     </footer>
   </body>
