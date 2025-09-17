@@ -1,4 +1,6 @@
-
+/* 
+   THEME
+*/
 :root {
   --bg1: #f4e7d6;
   --bg2: #efc58f;
@@ -13,7 +15,7 @@
 
 /*
    RESET
- */
+*/
 * {
   margin: 0;
   padding: 0;
@@ -36,9 +38,22 @@ img {
   display: block;
 }
 
+/* Unified link style (NOT buttons or icons) — no underline anywhere */
 a {
   text-decoration: none;
-  color: inherit;
+}
+
+/* hard stop: no underlines globally */
+
+a:not(.btn):not(.btn-outline):not(.icon) {
+  color: var(--brown);
+  font-weight: 600;
+  transition: color 0.2s, transform 0.2s;
+}
+
+a:not(.btn):not(.btn-outline):not(.icon):hover {
+  color: #8a5500;
+  transform: translateY(-1px);
 }
 
 .container {
@@ -86,7 +101,7 @@ a {
   box-shadow: var(--shadow-md);
 }
 
-/* Focus visible outlines */
+/* Focus outlines */
 :where(a, button, .btn, .btn-outline, .icon):focus-visible {
   outline: 3px solid var(--brown);
   outline-offset: 3px;
@@ -107,11 +122,39 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+/* Logo animation */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.96);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(2px) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .nav__logo {
+  animation: fadeSlideIn 1.5s ease forwards;
   font-size: 1.8rem;
   font-weight: 800;
   color: #5a3300;
   text-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition: transform .3s ease, color .2s ease;
+  line-height: 1;
+}
+
+.nav__logo:hover {
+  transform: translateY(-2px) scale(1.03);
+  color: #000;
+  /* optional darker hover */
 }
 
 .nav__links {
@@ -121,19 +164,20 @@ a {
 
 .nav__links a {
   font-weight: 700;
-  color: #000;
-  transition: color 0.2s;
+  color: var(--brown);
+  transition: color 0.2s, transform 0.2s;
 }
 
 .nav__links a:hover {
-  color: #5a3300;
+  color: #8a5500;
+  transform: translateY(-1px);
 }
 
 .nav__checkbox {
   display: none;
 }
 
-/* Hamburger lines */
+/* Hamburger */
 .nav__toggle {
   display: none;
   flex-direction: column;
@@ -149,7 +193,7 @@ a {
   transition: all 0.3s ease;
 }
 
-/* Responsive styles */
+/* Responsive nav */
 @media (max-width: 860px) {
   .nav__links {
     position: absolute;
@@ -171,7 +215,6 @@ a {
     border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 
-  /* Show hamburger */
   .nav__toggle {
     display: flex;
   }
@@ -201,6 +244,7 @@ a {
 
   .nav__logo {
     font-size: 1.4rem;
+    
   }
 }
 
@@ -245,6 +289,9 @@ a {
   object-fit: cover;
   border: 2px solid var(--brown);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+  /* Optional subtle blend:
+  opacity: .9; mix-blend-mode: multiply;
+  */
 }
 
 .hero__text {
@@ -320,8 +367,21 @@ a {
   font-weight: 800;
   background: var(--brown);
   color: #fff;
-  border: none;
-  box-shadow: 0 16px 34px rgba(109, 67, 0, 0.3);
+  border: 2px solid var(--brown);
+  box-shadow: 0 8px 20px rgba(109, 67, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--brown);
+  color: #fff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(109, 67, 0, 0.35);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--brown);
+  outline-offset: 3px;
 }
 
 .btn-outline {
@@ -332,6 +392,12 @@ a {
   border: 2px solid var(--brown);
   color: var(--brown);
   background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(109, 67, 0, 0.2);
 }
 
 /* 
@@ -499,7 +565,7 @@ a {
   color: var(--ink);
 }
 
-/* Actions row: compact */
+/* Actions row */
 .actions {
   display: flex;
   gap: 8px;
@@ -568,14 +634,13 @@ a {
   width: max-content;
   font-weight: 700;
   color: var(--brown);
-  border-bottom: 2px solid rgba(109, 67, 0, 0.4);
-  padding-bottom: 2px;
-  transition: color 0.2s, border-color 0.2s;
+  transition: color 0.2s, transform 0.2s;
+  /* no border underline */
 }
 
 .edu-link:hover {
-  color: var(--ink);
-  border-color: var(--ink);
+  color: #8a5500;
+  transform: translateY(-1px);
 }
 
 /* 
@@ -662,6 +727,7 @@ a {
   transform: scale(1.05);
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
 }
+
 /* 
    FOOTER
 */
@@ -689,8 +755,13 @@ a {
   justify-self: end;
   font-weight: 700;
   color: var(--brown);
-  border-bottom: 2px solid rgba(109, 67, 0, 0.25);
-  padding-bottom: 2px;
+  transition: color 0.2s, transform 0.2s;
+  /* no border underline */
+}
+
+.footer__top:hover {
+  color: #8a5500;
+  transform: translateY(-1px);
 }
 
 @media (max-width: 700px) {
