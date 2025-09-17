@@ -2,12 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Yordanos A — Portfolio</title>
     <meta
       name="description"
       content="Yordanos A — web developer portfolio showcasing projects, skills, education, and client feedback."
     />
+
+    <!-- Performance: preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Fonts & Icons -->
     <link
@@ -19,19 +24,25 @@
       rel="stylesheet"
     />
 
+    <meta name="theme-color" content="#f7d7ad" />
+    <link rel="icon" href="images/favicon.png" />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Skip link for keyboard users -->
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <!-- NAVBAR -->
     <nav class="navbar">
       <div class="nav__logo">Yordanos A.</div>
 
       <!-- Hamburger (only shows on mobile) -->
       <input type="checkbox" id="nav-toggle" class="nav__checkbox" />
-      <label for="nav-toggle" class="nav__toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+      <label for="nav-toggle" class="nav__toggle" aria-label="Open menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </label>
 
       <div class="nav__links">
@@ -41,11 +52,10 @@
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#hobbies">Hobbies</a>
-        <a href="#contact">Contact</a>
       </div>
     </nav>
 
-    <main>
+    <main id="main">
       <!-- HERO -->
       <header id="home" class="hero">
         <div class="container hero__grid">
@@ -54,6 +64,9 @@
               src="images/profile.png"
               alt="Yordanos portrait"
               class="hero__img"
+              width="360"
+              height="360"
+              sizes="(max-width: 900px) 220px, 360px"
             />
           </div>
 
@@ -121,7 +134,6 @@
       </header>
 
       <!-- ABOUT -->
-
       <section id="about" class="section">
         <div class="container">
           <div class="about-split">
@@ -150,8 +162,9 @@
 
               <p>
                 Previously, I interned remotely as a
-                <strong>Backend PHP Developer</strong> at Kurazi: building
-                endpoints, handling JSON APIs, and writing documentation.
+                <strong>Backend PHP Developer</strong> at Kurazi, where I
+                learned to build endpoints, handle JSON APIs, and write
+                documentation.
               </p>
 
               <div class="about-links">
@@ -182,11 +195,11 @@
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript (Basics)</li>
-            <li>php (Basics)</li>
+            <li>PHP (Basics)</li>
             <li>Command Line (Bash, Git)</li>
             <li>React (Basics)</li>
             <li>Responsive Design</li>
-            <li>C (Basic)</li>
+            <li>Node js (Basics)</li>
             <li>GitHub</li>
             <li>Python</li>
             <li>Flask (Basics)</li>
@@ -224,7 +237,7 @@
                   >
                   <a
                     class="btn-outline"
-                    href="https://github.com/yourusername/voice-for-her"
+                    href="https://github.com/Yordiemma/voice-for-her-frontend"
                     target="_blank"
                     rel="noopener noreferrer"
                     >GitHub</a
@@ -236,7 +249,7 @@
             <!-- Upwork -->
             <article class="project-card">
               <img
-                src="images/2.png"
+                src="images/6.png"
                 alt="Upwork public profile"
                 loading="lazy"
               />
@@ -314,31 +327,22 @@
       <section id="hobbies" class="section">
         <div class="container">
           <h2 class="sec__title">My Hobbies</h2>
-
-          <div class="hobbies-grid">
-            <!-- Card 1 -->
+          <div class="hobbies-grid hobbies-grid--3">
+            <!-- Card 1: Reading -->
             <article class="hobby-card">
               <div class="hobby-media">
-                <img
-                  src="./images/Book.png"
-                  alt="Reading books"
-                  loading="lazy"
-                />
+                <img src="./images/5.png" alt="Reading books" loading="lazy" />
               </div>
               <div class="hobby-body">
-                <h3>Reading</h3>
+                <h3>My All-Time Favorite Books</h3>
                 <p>I love reading self-improvement and fiction books.</p>
               </div>
             </article>
 
-            <!-- Card 2 -->
+            <!-- Card 2: Poetry -->
             <article class="hobby-card">
               <div class="hobby-media">
-                <img
-                  src="./images/poem.png"
-                  alt="Writing poems"
-                  loading="lazy"
-                />
+                <img src="./images/3.png" alt="Writing poems" loading="lazy" />
               </div>
               <div class="hobby-body">
                 <h3>Poem Writing</h3>
@@ -346,14 +350,17 @@
               </div>
             </article>
 
-            <!-- Card 3 -->
+            <!-- Card 3: Swimming -->
             <article class="hobby-card">
               <div class="hobby-media">
-                <img src="./images/swim.png" alt="Swimming" loading="lazy" />
+                <img src="./images/4.png" alt="Swimming" loading="lazy" />
               </div>
               <div class="hobby-body">
                 <h3>Swimming</h3>
-                <p>Helps me relax, stay active, and clear my mind.</p>
+                <p>
+                  I enjoy swimming because it keeps me active, healthy, and
+                  relaxed.
+                </p>
               </div>
             </article>
           </div>
