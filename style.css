@@ -434,7 +434,7 @@ a:not(.btn):not(.btn-outline):not(.icon):hover {
 }
 
 .about-photo {
-  opacity: 0.6;
+  opacity: 0.8;
   margin: 0;
   border-radius: var(--radius);
   overflow: hidden;
