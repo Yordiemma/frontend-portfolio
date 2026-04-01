@@ -2,420 +2,369 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Yordanos A — Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Yordanos A — web developer portfolio showcasing projects, skills, education, and client feedback."
+      content="Yordanos Agafari is a Front-End Developer in Stockholm focused on elegant, accessible, user-centered web experiences."
     />
-
-    <!-- Performance: preconnect for fonts -->
+    <title>Yordanos Agafari | Front-End Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Fonts & Icons -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
-
-    <meta name="theme-color" content="#f7d7ad" />
-    <link rel="icon" href="images/favicon.png" />
-
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Skip link for keyboard users -->
-    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="page-shell">
+      <div class="bg-orb orb-one"></div>
+      <div class="bg-orb orb-two"></div>
+      <div class="bg-orb orb-three"></div>
+      <div class="stars stars-sm"></div>
+      <div class="stars stars-lg"></div>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-      <div class="nav__logo">Yordanos A.</div>
+      <header class="site-header">
+        <nav class="navbar container" aria-label="Primary navigation">
+          <a class="brand" href="#home" aria-label="Yordanos Agafari home">
+            <span class="brand-mark">YA</span>
+          </a>
 
-      <!-- Hamburger (only shows on mobile) -->
-      <input type="checkbox" id="nav-toggle" class="nav__checkbox" />
-      <label for="nav-toggle" class="nav__toggle" aria-label="Open menu">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </label>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-links"
+            aria-label="Open menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-      <div class="nav__links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#hobbies">Hobbies</a>
-      </div>
-    </nav>
-
-    <main id="main">
-      <!-- HERO -->
-      <header id="home" class="hero">
-        <div class="container hero__grid">
-          <div class="hero__media">
-            <img
-              src="images/profile.png"
-              alt="Yordanos portrait"
-              class="hero__img"
-              width="360"
-              height="360"
-              sizes="(max-width: 900px) 220px, 360px"
-            />
+          <div class="nav-links" id="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
           </div>
-
-          <div class="hero__text">
-            <h1 class="hero__title">
-              Hey I'm <span class="name">Yordanos A.</span>
-            </h1>
-            <h2 class="hero__line">
-              I'm a <span class="word"><b>Developer</b></span>
-            </h2>
-
-            <p class="hero__lead">
-              I build modern, responsive websites with clean UI and accessible
-              UX. I’m focused on learning and improving every day.
-            </p>
-
-            <div class="hero__icons">
-              <a
-                class="icon"
-                href="https://github.com/Yordiemma"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-              >
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a
-                class="icon"
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <i class="fa-brands fa-facebook-f"></i>
-              </a>
-              <a
-                class="icon"
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-              <a
-                class="icon"
-                href="https://x.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="X/Twitter"
-              >
-                <i class="fa-brands fa-x-twitter"></i>
-              </a>
-            </div>
-
-            <a
-              class="btn"
-              href="./assets/yordanosAgafariCV .pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Download CV</a
-            >
-          </div>
-        </div>
+        </nav>
       </header>
 
-      <!-- ABOUT -->
-      <section id="about" class="section">
-        <div class="container">
-          <div class="about-split">
-            <!-- LEFT SIDE: TEXT -->
-            <div class="about-content">
-              <h2 class="sec__title about-title">About Me</h2>
-
-              <p>
-                I’m an aspiring Front-End Developer focused on clean UI and
-                accessible UX. I enjoy turning ideas into fast, responsive web
-                experiences.
-              </p>
-
-              <p>
-                I’ve completed
-                <strong>ALX Intro to Software Engineering</strong> and I’m
-                currently studying
-                <strong>Front-End Development at Hyper Island</strong>. I also
-                strengthened my foundations with Java at
-                <strong>LTU</strong> and studied
-                <strong
-                  >1.5 years of Computer Science at the University of the
-                  People</strong
-                >.
-              </p>
-
-              <p>
-                Previously, I interned remotely as a
-                <strong>Backend PHP Developer</strong> at Kurazi, where I
-                learned to build endpoints, handle JSON APIs, and write
-                documentation.
-              </p>
-
-              <div class="about-links">
-                <a class="btn" href="#projects">Go to Portfolio</a>
-                <a
-                  class="btn-outline"
-                  href="https://github.com/Yordiemma"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub</a
-                >
-              </div>
+      <main>
+        <section class="hero container section" id="home">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Hi there &#128075;</p>
+            <h1>
+              I'm <span class="text-gradient">Yordanos Agafari</span>
+            </h1>
+            <p class="hero-role">
+              <span id="typed-text" aria-live="polite"></span>
+              <span class="cursor" aria-hidden="true"></span>
+            </p>
+            <p class="hero-description">
+              I build modern, user-focused web applications with a strong focus
+              on design and usability.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">View Projects</a>
+              <a class="button button-secondary" href="#contact">Contact Me</a>
             </div>
-
-            <!-- RIGHT SIDE: IMAGE -->
-            <figure class="about-photo">
-              <img src="images/about.png" alt="Yordanos portrait" />
-            </figure>
+            <div class="hero-metrics">
+              <article class="metric-card">
+                <strong>UI-first</strong>
+                <span>Thoughtful interfaces with accessibility in mind</span>
+              </article>
+              <article class="metric-card">
+                <strong>Agile Teamwork</strong>
+                <span>Collaborative delivery across frontend and backend</span>
+              </article>
+            </div>
           </div>
-        </div>
-      </section>
 
-      <!-- SKILLS -->
-      <section id="skills" class="section">
-        <div class="container">
-          <h2 class="sec__title">Skills</h2>
-          <ul class="skills-grid">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript (Basics)</li>
-            <li>PHP (Basics)</li>
-            <li>Command Line (Bash, Git)</li>
-            <li>React (Basics)</li>
-            <li>Responsive Design</li>
-            <li>Node js (Basics)</li>
-            <li>GitHub</li>
-            <li>c,c#</li>
-            <li>Python</li>
-            <li>Flask (Basics)</li>
-            <li>PostgreSQL (Basics)</li>
-            <li>Java (Basics)</li>
-            <li>Problem-Solving</li>
-          </ul>
-        </div>
-      </section>
+          <div class="hero-visual reveal">
+            <div class="portrait-card">
+              <div class="portrait-ring"></div>
+              <div class="portrait-glow"></div>
+              <div class="portrait-illustration" aria-hidden="true">
+                <div class="portrait-halo"></div>
+                <div class="portrait-avatar">
+                  <span>YA</span>
+                </div>
+              </div>
+              <div class="floating-badge badge-top">Stockholm based</div>
+              <div class="floating-badge badge-bottom">Hyper Island</div>
+            </div>
+          </div>
+        </section>
 
-      <!-- PROJECTS -->
+        <section class="section container" id="about">
+          <div class="section-heading reveal">
+            <p class="section-tag">About</p>
+            <h2>Designing polished digital experiences with care.</h2>
+          </div>
+          <div class="about-grid">
+            <article class="glass-card reveal">
+              <p>
+                I'm Yordanos Agafari, a Front-End Developer based in Stockholm
+                and currently studying at Hyper Island. I enjoy building modern
+                interfaces with React, Next.js, and TypeScript, with a strong
+                focus on responsive design, accessibility, and clean visual
+                systems. Alongside my studies, I work as a Full-Stack Developer
+                Intern in an Agile team, contributing to both frontend and
+                backend features, collaborating with APIs, and continuously
+                sharpening my craft through meaningful, user-centered projects.
+              </p>
+            </article>
+            <aside class="about-highlights reveal">
+              <div class="highlight-card">
+                <span class="highlight-label">Specialties</span>
+                <p>React, Next.js, TypeScript, UI development, clean systems</p>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-label">Approach</span>
+                <p>Elegant experiences, inclusive design, and structured code</p>
+              </div>
+            </aside>
+          </div>
+        </section>
 
-      <section id="projects" class="section">
-        <div class="container">
-          <h2 class="sec__title">Projects</h2>
+        <section class="section container" id="skills">
+          <div class="section-heading reveal">
+            <p class="section-tag">Skills</p>
+            <h2>Balanced across interface craft, engineering, and collaboration.</h2>
+          </div>
+          <div class="skills-grid">
+            <article class="skill-group glass-card reveal">
+              <h3>Frontend</h3>
+              <ul class="pill-list">
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>Responsive Design</li>
+                <li>Accessibility</li>
+              </ul>
+            </article>
+            <article class="skill-group glass-card reveal">
+              <h3>Backend</h3>
+              <ul class="pill-list">
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>REST APIs</li>
+                <li>MongoDB</li>
+                <li>PostgreSQL</li>
+                <li>Python</li>
+              </ul>
+            </article>
+            <article class="skill-group glass-card reveal">
+              <h3>Tools</h3>
+              <ul class="pill-list">
+                <li>Git &amp; GitHub</li>
+                <li>VS Code</li>
+                <li>Figma</li>
+              </ul>
+            </article>
+          </div>
+        </section>
 
+        <section class="section container" id="experience">
+          <div class="section-heading reveal">
+            <p class="section-tag">Experience</p>
+            <h2>Growing through real-world product work and continuous learning.</h2>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item glass-card reveal">
+              <span class="timeline-date">Current</span>
+              <h3>Full-Stack Developer Intern</h3>
+              <p>
+                Collaborating in an Agile team to build and improve product
+                features across frontend and backend workflows, working with
+                APIs, clean implementation patterns, and user-focused delivery.
+              </p>
+            </article>
+            <article class="timeline-item glass-card reveal">
+              <span class="timeline-date">2024</span>
+              <h3>Web Developer Intern</h3>
+              <p>
+                Supported web development initiatives with responsive UI work,
+                implementation of modern interface components, and attention to
+                usability, structure, and consistent design quality.
+              </p>
+            </article>
+            <article class="timeline-item glass-card reveal">
+              <span class="timeline-date">2023 - 2024</span>
+              <h3>Freelance Web Developer</h3>
+              <p>
+                Delivered tailored websites for clients with a focus on visual
+                polish, maintainable code, and practical solutions that aligned
+                with business and user needs.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section container" id="projects">
+          <div class="section-heading reveal">
+            <p class="section-tag">Projects</p>
+            <h2>Selected work that blends thoughtful UX with modern engineering.</h2>
+          </div>
           <div class="projects-grid">
-            <!-- Voice For Her -->
-            <article class="project-card">
-              <img
-                src="images/1.png"
-                alt="Voice For Her project preview"
-                loading="lazy"
-              />
-              <div class="project-body">
-                <h3>Voice For Her</h3>
-                <div class="actions">
-                  <a
-                    class="btn"
-                    href="https://voice-for-her-frontend.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Live Site</a
-                  >
-                  <a
-                    class="btn-outline"
-                    href="https://github.com/Yordiemma/voice-for-her-frontend"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >GitHub</a
-                  >
-                </div>
+            <article class="project-card glass-card reveal">
+              <div class="project-topline">
+                <span class="project-kicker">Featured Project</span>
+                <h3>VoiceForHer</h3>
+              </div>
+              <p>
+                A full-stack platform centered on meaningful user interaction,
+                combining polished UI with robust application logic and API
+                integration.
+              </p>
+              <ul class="pill-list compact">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+              </ul>
+              <div class="project-actions">
+                <a class="button button-secondary" href="#" target="_blank" rel="noreferrer">Demo</a>
+                <a class="button button-ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
               </div>
             </article>
 
-            <!-- Upwork -->
-            <article class="project-card">
-              <img
-                src="images/6.png"
-                alt="Upwork public profile"
-                loading="lazy"
-              />
-              <div class="project-body">
-                <h3>Upwork Highlights</h3>
-                <div class="actions">
-                  <a
-                    class="btn"
-                    href="https://www.upwork.com/freelancers/~0187d08c233b7f0264"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >View Upwork</a
-                  >
-                </div>
+            <article class="project-card glass-card reveal">
+              <div class="project-topline">
+                <span class="project-kicker">Personal Brand</span>
+                <h3>Portfolio Website</h3>
               </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- EDUCATION -->
-      <section id="education" class="section">
-        <div class="container">
-          <h2 class="sec__title">Education</h2>
-
-          <div class="edu-grid">
-            <article class="edu-card">
-              <h3>Hyper Island — Front-End Development (current)</h3>
-              <a
-                class="edu-link"
-                href="https://hyperisland.com/programs-and-courses"
-                target="_blank"
-                rel="noopener noreferrer"
-                >View program</a
-              >
-            </article>
-
-            <article class="edu-card">
-              <h3>ALX — Intro to Software Engineering (1 year)</h3>
-              <a
-                class="edu-link"
-                href="https://alx.training/en/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >View program</a
-              >
-            </article>
-
-            <article class="edu-card">
-              <h3>LTU — Introductory Programming in Java (stand-alone)</h3>
-              <a
-                class="edu-link"
-                href="https://www.ltu.se/edu/course/D00/D0009E/D0009E-Introductory-Programming-in-Java"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Course page</a
-              >
-            </article>
-
-            <article class="edu-card">
-              <h3>University of the People — Computer Science (~1.5 years)</h3>
-              <a
-                class="edu-link"
-                href="https://www.uopeople.edu/programs/cs/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Program</a
-              >
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- HOBBIES -->
-      <section id="hobbies" class="section">
-        <div class="container">
-          <h2 class="sec__title">My Hobbies</h2>
-          <div class="hobbies-grid hobbies-grid--3">
-            <!-- Card 1: Reading -->
-            <article class="hobby-card">
-              <div class="hobby-media">
-                <img src="./images/5.png" alt="Reading books" loading="lazy" />
-              </div>
-              <div class="hobby-body">
-                <h3>My All-Time Favorite Books</h3>
-                <p>I love reading self-improvement and fiction books.</p>
+              <p>
+                A refined, responsive portfolio experience built to present my
+                work, strengths, and design sensibility with clarity and
+                confidence.
+              </p>
+              <ul class="pill-list compact">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Responsive UI</li>
+              </ul>
+              <div class="project-actions">
+                <a class="button button-secondary" href="#" target="_blank" rel="noreferrer">Demo</a>
+                <a class="button button-ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
               </div>
             </article>
 
-            <!-- Card 2: Poetry -->
-            <article class="hobby-card">
-              <div class="hobby-media">
-                <img src="./images/3.png" alt="Writing poems" loading="lazy" />
+            <article class="project-card glass-card reveal">
+              <div class="project-topline">
+                <span class="project-kicker">Frontend Focus</span>
+                <h3>Accessible UI System</h3>
               </div>
-              <div class="hobby-body">
-                <h3>Poem Writing</h3>
-                <p>I write short poems to express ideas and emotions.</p>
-              </div>
-            </article>
-
-            <!-- Card 3: Swimming -->
-            <article class="hobby-card">
-              <div class="hobby-media">
-                <img src="./images/4.png" alt="Swimming" loading="lazy" />
-              </div>
-              <div class="hobby-body">
-                <h3>Swimming</h3>
-                <p>
-                  I enjoy swimming because it keeps me active, healthy, and
-                  relaxed.
-                </p>
+              <p>
+                A concept project exploring reusable components, elegant visual
+                hierarchy, and accessibility-first interaction patterns for
+                modern web products.
+              </p>
+              <ul class="pill-list compact">
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Figma</li>
+                <li>A11y</li>
+              </ul>
+              <div class="project-actions">
+                <a class="button button-secondary" href="#" target="_blank" rel="noreferrer">Demo</a>
+                <a class="button button-ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
               </div>
             </article>
           </div>
+        </section>
+
+        <section class="section container" id="resume">
+          <div class="resume-card glass-card reveal">
+            <div>
+              <p class="section-tag">Resume</p>
+              <h2>Interested in my background and experience?</h2>
+              <p>
+                Download a concise overview of my experience, skills, and
+                technical focus. You can replace the placeholder file with your
+                latest PDF anytime.
+              </p>
+            </div>
+            <a class="button button-primary" href="Yordanos-Agafari-CV.txt" download>
+              Download CV
+            </a>
+          </div>
+        </section>
+
+        <section class="section container" id="contact">
+          <div class="section-heading reveal">
+            <p class="section-tag">Contact</p>
+            <h2>Let's create something thoughtful and beautiful together.</h2>
+          </div>
+          <div class="contact-grid">
+            <article class="contact-panel glass-card reveal">
+              <h3>Get in touch</h3>
+              <p>
+                I'm open to internships, freelance opportunities, and
+                collaborations focused on user-centered digital products.
+              </p>
+              <div class="social-links" aria-label="Social links">
+                <a href="#" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 2C6.48 2 2 6.58 2 12.24c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.46-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.35 1.12 2.92.86.09-.67.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.09 0-1.13.39-2.05 1.03-2.77-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.06A9.3 9.3 0 0 1 12 6.84c.85 0 1.71.12 2.51.35 1.9-1.33 2.74-1.06 2.74-1.06.55 1.42.21 2.47.11 2.73.64.72 1.03 1.64 1.03 2.77 0 3.96-2.33 4.82-4.56 5.08.36.32.68.95.68 1.92 0 1.39-.01 2.51-.01 2.85 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.24C22 6.58 17.52 2 12 2Z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M6.94 8.5A1.56 1.56 0 1 1 6.93 5.4a1.56 1.56 0 0 1 .01 3.1ZM5.62 9.69h2.63V18H5.62V9.69Zm4.28 0h2.52v1.13h.04c.35-.66 1.21-1.36 2.5-1.36 2.67 0 3.16 1.76 3.16 4.05V18h-2.62v-3.95c0-.94-.02-2.15-1.31-2.15-1.31 0-1.51 1.03-1.51 2.08V18H9.9V9.69Z"
+                    />
+                  </svg>
+                </a>
+                <a href="#" aria-label="Email">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M3 5.5A2.5 2.5 0 0 1 5.5 3h13A2.5 2.5 0 0 1 21 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18.5v-13Zm2.08-.5L12 10.18 18.92 5H5.08Zm13.92 2.1-6.48 4.83a.9.9 0 0 1-1.04 0L5 7.1v11.4c0 .28.22.5.5.5h13a.5.5 0 0 0 .5-.5V7.1Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <form class="contact-form glass-card reveal">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your name" />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="your@email.com" />
+              </label>
+              <label>
+                Message
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="Tell me a bit about your project or idea..."
+                ></textarea>
+              </label>
+              <button class="button button-primary" type="submit">Send Message</button>
+              <p class="form-note">This demo form uses a JavaScript placeholder action.</p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <p>&copy; <span id="year"></span> Yordanos Agafari</p>
+          <a href="#home" class="back-to-top">Back to top</a>
         </div>
-      </section>
-    </main>
+      </footer>
+    </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container footer__row">
-        <p>© 2025 Yordanos A.</p>
-
-        <div class="footer__icons">
-          <a
-            class="icon"
-            href="https://github.com/Yordiemma"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a
-            class="icon"
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-          >
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a
-            class="icon"
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a
-            class="icon"
-            href="https://x.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="X/Twitter"
-          >
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-        </div>
-
-        <a href="#home" class="footer__top" aria-label="Back to top"
-          >↑ Back to top</a
-        >
-      </div>
-    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
