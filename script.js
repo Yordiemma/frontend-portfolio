@@ -69,6 +69,10 @@ function toggleMenu() {
 }
 
 function closeMenu() {
+  if (!navLinks || !menuToggle) {
+    return;
+  }
+
   navLinks.classList.remove("is-open");
   menuToggle.setAttribute("aria-expanded", "false");
   menuToggle.setAttribute("aria-label", "Open menu");
@@ -77,6 +81,25 @@ function closeMenu() {
 if (menuToggle && navLinks) {
   menuToggle.addEventListener("click", toggleMenu);
   navItems.forEach((item) => item.addEventListener("click", closeMenu));
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+
+    if (
+      navLinks.classList.contains("is-open") &&
+      target instanceof Node &&
+      !navLinks.contains(target) &&
+      !menuToggle.contains(target)
+    ) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
 }
 
 if (contactForm) {
