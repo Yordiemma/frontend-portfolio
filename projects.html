@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="See projects by Yordanos Agafari, including Voice For Her and Velora Hair."
+    />
+    <title>Yordanos Agafari | Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="bg-orb orb-one"></div>
+      <div class="bg-orb orb-two"></div>
+      <div class="bg-orb orb-three"></div>
+      <div class="stars stars-sm"></div>
+      <div class="stars stars-lg"></div>
+
+      <header class="site-header">
+        <nav class="navbar container" aria-label="Primary navigation">
+          <a class="brand" href="index.html" aria-label="Yordanos Agafari home">
+            <span class="brand-logo" aria-hidden="true">
+              <span class="brand-logo-y">Y</span>
+              <span class="brand-logo-a">A</span>
+            </span>
+            <span class="brand-text">Yordanos</span>
+          </a>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-links"
+            aria-label="Open menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a class="is-active" href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="Yordanos_Cv (1).pdf" download>Resume</a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="section container page-hero">
+          <div class="page-intro glass-card reveal">
+            <p class="section-tag">Projects</p>
+            <h1>These are some of the projects I have been working on.</h1>
+            <p class="hero-description hero-description-strong">
+              I wanted this page to be simple and easy to look through. These
+              projects show what I have built and what I am still working on.
+            </p>
+          </div>
+        </section>
+
+        <section class="section container">
+          <div class="projects-grid projects-grid-wide">
+            <article class="project-card glass-card reveal">
+              <img
+                class="project-image"
+                src="img/voice for her.png"
+                alt="Screenshot of the Voice For Her project"
+              />
+              <div class="project-topline">
+                <span class="project-kicker">Featured Project</span>
+                <h3>Voice For Her</h3>
+              </div>
+              <p>
+                This project helped me practice building a clear layout and a
+                better user experience. It helped me grow and learn more by
+                building something real.
+              </p>
+              <ul class="pill-list compact">
+                <li>JavaScript</li>
+                <li>React</li>
+              </ul>
+              <div class="project-actions">
+                <a class="button button-secondary" href="https://voice-for-her-frontend.vercel.app" target="_blank" rel="noreferrer">Live Demo</a>
+              </div>
+            </article>
+
+            <article class="project-card glass-card reveal">
+              <img
+                class="project-image"
+                src="img/velora hair.png"
+                alt="Screenshot of the Velora Hair ecommerce project"
+              />
+              <div class="project-topline">
+                <span class="project-kicker">Ecommerce Project</span>
+                <h3>Velora Hair</h3>
+              </div>
+              <p>
+                This is an ecommerce website I am still working on. It is
+                helping me learn more about layout, shopping pages, and how to
+                make a website feel more real.
+              </p>
+              <ul class="pill-list compact">
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Work in progress</li>
+              </ul>
+              <div class="project-actions">
+                <a class="button button-secondary" href="https://velora-hair.vercel.app" target="_blank" rel="noreferrer">Live Demo</a>
+              </div>
+            </article>
+
+            <article class="project-card glass-card reveal">
+              <div class="project-image project-image-placeholder" aria-hidden="true">
+                <span>Portfolio</span>
+              </div>
+              <div class="project-topline">
+                <span class="project-kicker">Personal Website</span>
+                <h3>Portfolio Website</h3>
+              </div>
+              <p>
+                This portfolio is also one of my projects. I changed it to feel
+                more personal, more modern, and easier to move through.
+              </p>
+              <ul class="pill-list compact">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Personal Style</li>
+              </ul>
+              <div class="project-actions">
+                <a class="button button-secondary" href="index.html">Back Home</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <p>&copy; <span id="year"></span> Yordanos Agafari</p>
+          <a href="contact.html" class="back-to-top">Next: Contact</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

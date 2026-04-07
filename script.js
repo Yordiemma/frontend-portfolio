@@ -1,8 +1,8 @@
 const typedText = document.querySelector("#typed-text");
 const words = [
-  "Front-End Developer",
-  "React Developer",
-  "Creative Problem Solver"
+  "Open To Work",
+  "Building Websites",
+  "Always Learning"
 ];
 
 const menuToggle = document.querySelector(".menu-toggle");

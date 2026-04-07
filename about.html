@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn more about Yordanos Agafari, her story, and the skills she is using."
+    />
+    <title>Yordanos Agafari | About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="bg-orb orb-one"></div>
+      <div class="bg-orb orb-two"></div>
+      <div class="bg-orb orb-three"></div>
+      <div class="stars stars-sm"></div>
+      <div class="stars stars-lg"></div>
+
+      <header class="site-header">
+        <nav class="navbar container" aria-label="Primary navigation">
+          <a class="brand" href="index.html" aria-label="Yordanos Agafari home">
+            <span class="brand-logo" aria-hidden="true">
+              <span class="brand-logo-y">Y</span>
+              <span class="brand-logo-a">A</span>
+            </span>
+            <span class="brand-text">Yordanos</span>
+          </a>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-links"
+            aria-label="Open menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a class="is-active" href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="Yordanos_Cv (1).pdf" download>Resume</a>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="section container page-hero">
+          <div class="page-intro glass-card reveal">
+            <p class="section-tag">About Me</p>
+            <h1>My journey in coding started with confusion and slowly turned into something I really enjoy.</h1>
+            <p class="hero-description hero-description-strong">
+              I started programming with C and I honestly did not understand it
+              at first. Then I moved to Python, which helped me feel more
+              comfortable. But JavaScript is the language that made things feel
+              exciting for me.
+            </p>
+          </div>
+        </section>
+
+        <section class="section container">
+          <div class="about-grid page-grid">
+            <article class="glass-card reveal">
+              <p class="lead-text">
+                Now I enjoy building websites that feel simple, modern, and
+                personal. I like seeing an idea turn into something real that
+                people can use and enjoy.
+              </p>
+              <p>
+                I am still learning every day and trying to get better with
+                JavaScript and design. My goal is to make work that
+                looks good and feels easy to understand.
+              </p>
+            </article>
+            <aside class="about-highlights reveal">
+              <div class="highlight-card">
+                <span class="highlight-label">Focus now</span>
+                <p>JavaScript, React, and simple design</p>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-label">How I work</span>
+                <p>I learn by building projects, improving them, and trying to make each one better than the last.</p>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section container">
+          <div class="section-heading reveal">
+            <p class="section-tag">Skills</p>
+            <h2>These are some of the tools and skills I use.</h2>
+          </div>
+          <div class="skills-grid">
+            <article class="skill-group glass-card reveal">
+              <h3>Main tools</h3>
+              <ul class="pill-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+              </ul>
+            </article>
+            <article class="skill-group glass-card reveal">
+              <h3>Other tools</h3>
+              <ul class="pill-list">
+                <li>C</li>
+                <li>Python</li>
+                <li>Node.js</li>
+              </ul>
+            </article>
+            <article class="skill-group glass-card reveal">
+              <h3>Tools</h3>
+              <ul class="pill-list">
+                <li>Git &amp; GitHub</li>
+                <li>VS Code</li>
+                <li>Figma</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section container">
+          <div class="resume-card glass-card reveal">
+            <div>
+              <p class="section-tag">Resume</p>
+              <h2>Want to know more about my background?</h2>
+              <p>You can download my CV here.</p>
+            </div>
+            <a class="button button-primary" href="Yordanos_Cv (1).pdf" download>
+              Download CV
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <p>&copy; <span id="year"></span> Yordanos Agafari</p>
+          <a href="projects.html" class="back-to-top">Next: Projects</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
