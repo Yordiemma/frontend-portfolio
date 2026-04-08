@@ -1,29 +1,42 @@
 # Yordanos Agafari Portfolio
 
-This is my personal portfolio website.
+Personal portfolio website made to share my work, my story, and my contact information.
 
-It includes:
+## Overview
 
-- Home page
-- About page
-- Projects page
-- Contact page
+This project is a simple portfolio website with separate pages for:
 
-Built with:
+- Home
+- About
+- Projects
+- Contact
+
+## Tech Stack
 
 - HTML
 - CSS
 - JavaScript
 
-## Live Projects
+## Featured Projects
 
-- Voice For Her: https://voice-for-her-frontend.vercel.app
-- Velora Hair: https://velora-hair.vercel.app
+- Voice For Her  
+  https://voice-for-her-frontend.vercel.app
 
-## Run Locally
+- Velora Hair  
+  https://velora-hair.vercel.app
 
-Open `index.html` in your browser.
+## Getting Started
+
+To open the project locally:
+
+1. Clone the repository
+2. Open `index.html` in your browser
 
 ## Author
 
 Yordanos Agafari
+
+## Connect
+
+- GitHub: https://github.com/Yordiemma
+- LinkedIn: https://www.linkedin.com/in/yordanos-agafari-2636a5240/
