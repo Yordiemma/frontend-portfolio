@@ -609,7 +609,7 @@ textarea {
   margin: 0;
   color: var(--heading);
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-size: clamp(3.4rem, 8.5vw, 6rem);
   line-height: 0.98;
   letter-spacing: -0.03em;
 }
@@ -625,10 +625,25 @@ textarea {
   gap: 1.5rem;
 }
 
+.about-gif-card {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.about-gif-image {
+  width: 100%;
+  border-radius: 24px;
+  min-height: 360px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(2, 9, 21, 0.28);
+}
+
 .glass-card,
 .resume-card {
   border-radius: var(--radius-lg);
-  padding: 2.35rem;
+  padding: 2.7rem;
   position: relative;
   overflow: hidden;
 }
@@ -639,12 +654,42 @@ textarea {
 }
 
 .highlight-card {
-  padding: 1.5rem;
+  padding: 1.7rem;
   border-radius: var(--radius-md);
 }
 
 .highlight-card p {
   margin-bottom: 0;
+}
+
+.page-intro .hero-description,
+.about-grid .glass-card p,
+.about-grid .highlight-card p,
+.resume-card p {
+  font-size: 1.14rem;
+  line-height: 1.9;
+}
+
+.about-grid .lead-text {
+  font-size: 1.48rem;
+  line-height: 1.95;
+}
+
+.about-grid h2 {
+  margin: 0 0 1rem;
+  color: var(--heading);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  line-height: 1;
+}
+
+.about-highlights .highlight-label,
+.about-grid .section-tag {
+  font-size: 1rem;
+}
+
+.about-gif-card .form-note {
+  font-size: 1rem;
 }
 
 .spotlight-grid {
@@ -1218,7 +1263,7 @@ textarea {
   .timeline-item p,
   .contact-panel p,
   .resume-card p {
-    font-size: 0.98rem;
+    font-size: 1.04rem;
     line-height: 1.7;
   }
 
