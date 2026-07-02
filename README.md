@@ -4,10 +4,11 @@ Personal portfolio website made to share my work, my story, and my contact infor
 
 ## Overview
 
-This project is a simple portfolio website with separate pages for:
+This project is a single-page portfolio. The fixed navigation scrolls to:
 
 - Home
 - About
+- Skills
 - Projects
 - Contact
 
@@ -19,11 +20,14 @@ This project is a simple portfolio website with separate pages for:
 
 ## Featured Projects
 
-- Voice For Her  
+- Voice For Her
   https://voice-for-her-frontend.vercel.app
 
-- Velora Hair  
+- Velora Hair
   https://velora-hair.vercel.app
+
+- Weekend in Stockholm
+  https://yordiemma.github.io/Trip-Finder/
 
 ## Getting Started
 

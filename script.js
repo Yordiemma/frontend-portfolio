@@ -1,54 +1,35 @@
-const typedText = document.querySelector("#typed-text");
-const words = [
-  "Open To Work",
-  "Building Websites",
-  "Always Learning"
-];
-
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
-const navItems = document.querySelectorAll(".nav-links a");
+const navItems = [...document.querySelectorAll('.nav-links a[href^="#"]')];
 const revealItems = document.querySelectorAll(".reveal");
-const contactForm = document.querySelector(".contact-form");
 const yearNode = document.querySelector("#year");
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-
-function typeLoop() {
-  if (!typedText) {
-    return;
-  }
-
-  const currentWord = words[wordIndex];
-  typedText.textContent = isDeleting
-    ? currentWord.slice(0, charIndex--)
-    : currentWord.slice(0, charIndex++);
-
-  let delay = isDeleting ? 55 : 95;
-
-  if (!isDeleting && charIndex === currentWord.length + 1) {
-    isDeleting = true;
-    delay = 1400;
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    wordIndex = (wordIndex + 1) % words.length;
-    delay = 350;
-  }
-
-  window.setTimeout(typeLoop, delay);
+function closeMenu() {
+  navLinks?.classList.remove("is-open");
+  menuToggle?.setAttribute("aria-expanded", "false");
+  menuToggle?.setAttribute("aria-label", "Open menu");
 }
 
-function revealOnScroll() {
-  if (prefersReducedMotion.matches) {
-    revealItems.forEach((item) => item.classList.add("is-visible"));
-    return;
-  }
+menuToggle?.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("is-open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+});
 
-  const observer = new IntersectionObserver(
-    (entries) => {
+navItems.forEach((link) => link.addEventListener("click", closeMenu));
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeMenu();
+  }
+});
+
+if (reduceMotion.matches) {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+} else {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
@@ -56,83 +37,36 @@ function revealOnScroll() {
         }
       });
     },
-    { threshold: 0.16 }
+    { threshold: 0.14 }
   );
 
-  revealItems.forEach((item) => observer.observe(item));
+  revealItems.forEach((item) => revealObserver.observe(item));
 }
 
-function toggleMenu() {
-  const isOpen = navLinks.classList.toggle("is-open");
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-  menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-}
+const sections = navItems
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
 
-function closeMenu() {
-  if (!navLinks || !menuToggle) {
-    return;
-  }
+const navigationObserver = new IntersectionObserver(
+  (entries) => {
+    const visibleSection = entries.find((entry) => entry.isIntersecting);
 
-  navLinks.classList.remove("is-open");
-  menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "Open menu");
-}
-
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener("click", toggleMenu);
-  navItems.forEach((item) => item.addEventListener("click", closeMenu));
-
-  document.addEventListener("click", (event) => {
-    const target = event.target;
-
-    if (
-      navLinks.classList.contains("is-open") &&
-      target instanceof Node &&
-      !navLinks.contains(target) &&
-      !menuToggle.contains(target)
-    ) {
-      closeMenu();
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeMenu();
-    }
-  });
-}
-
-if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const submitButton = contactForm.querySelector("button[type='submit']");
-
-    if (submitButton) {
-      submitButton.textContent = "Message Sent";
-      submitButton.disabled = true;
+    if (!visibleSection) {
+      return;
     }
 
-    window.setTimeout(() => {
-      contactForm.reset();
+    navItems.forEach((link) => {
+      link.classList.toggle(
+        "is-active",
+        link.getAttribute("href") === `#${visibleSection.target.id}`
+      );
+    });
+  },
+  { rootMargin: "-30% 0px -60% 0px" }
+);
 
-      if (submitButton) {
-        submitButton.textContent = "Send Message";
-        submitButton.disabled = false;
-      }
-    }, 1800);
-  });
-}
+sections.forEach((section) => navigationObserver.observe(section));
 
 if (yearNode) {
   yearNode.textContent = new Date().getFullYear();
 }
-
-if (typedText) {
-  if (prefersReducedMotion.matches) {
-    typedText.textContent = words[0];
-  } else {
-    typeLoop();
-  }
-}
-
-revealOnScroll();
