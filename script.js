@@ -17,7 +17,23 @@ menuToggle?.addEventListener("click", () => {
   menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
 });
 
-navItems.forEach((link) => link.addEventListener("click", closeMenu));
+navItems.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const target = document.querySelector(link.getAttribute("href"));
+
+    if (!target) {
+      return;
+    }
+
+    event.preventDefault();
+    target.scrollIntoView({
+      behavior: reduceMotion.matches ? "auto" : "smooth",
+      block: "start"
+    });
+    window.history.replaceState(null, "", link.getAttribute("href"));
+    closeMenu();
+  });
+});
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
@@ -56,10 +72,16 @@ const navigationObserver = new IntersectionObserver(
     }
 
     navItems.forEach((link) => {
-      link.classList.toggle(
-        "is-active",
-        link.getAttribute("href") === `#${visibleSection.target.id}`
-      );
+      const isCurrent =
+        link.getAttribute("href") === `#${visibleSection.target.id}`;
+
+      link.classList.toggle("is-active", isCurrent);
+
+      if (isCurrent) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
     });
   },
   { rootMargin: "-30% 0px -60% 0px" }

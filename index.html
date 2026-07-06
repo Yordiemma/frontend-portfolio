@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -20,8 +20,9 @@
     />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="style.css" />
-  </link>
+  </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <nav class="nav-wrap" aria-label="Primary navigation">
         <a class="brand" href="#home">Yordanos <span>Agafari</span></a>
@@ -35,20 +36,20 @@
           <span></span><span></span><span></span>
         </button>
         <div class="nav-links" id="nav-links">
-          <a class="is-active" href="#home">Home</a>
+          <a class="is-active" href="#profile" aria-current="page">Home</a>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
-          <a href="Yordanos_Cv.pdf" download>Resume</a>
+          <a href="Yordanos_Cv.pdf" download="Yordanos_Agafari_CV.pdf">Resume</a>
         </div>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero" id="home">
         <div class="hero-monogram" aria-hidden="true">YA</div>
         <div class="hero-content reveal">
-          <div class="portrait-frame">
+          <div class="portrait-frame" id="profile">
             <img src="img/profile.jpg" alt="Portrait of Yordanos Agafari" />
           </div>
           <p class="role-badge">Frontend Developer</p>
@@ -58,7 +59,7 @@
             experiences that feel easy to use.
           </p>
           <div class="hero-actions">
-            <a class="button button-light" href="Yordanos_Cv.pdf" download>Download CV</a>
+            <a class="button button-light" href="Yordanos_Cv.pdf" download="Yordanos_Agafari_CV.pdf">Download CV</a>
             <a class="button button-outline" href="#projects">My Projects</a>
           </div>
         </div>
@@ -76,22 +77,33 @@
 
       <div class="tech-strip" aria-label="Technologies">
         <div class="tech-strip-track">
-          <span><i class="devicon-javascript-plain"></i>JavaScript</span>
-          <span><i class="devicon-react-original"></i>React</span>
-          <span><i class="devicon-nodejs-plain"></i>Node.js</span>
-          <span><i class="devicon-mongodb-plain"></i>MongoDB</span>
-          <span><i class="devicon-html5-plain"></i>HTML</span>
-          <span><i class="devicon-css3-plain"></i>CSS</span>
-          <span><i class="devicon-git-plain"></i>Git</span>
-          <span><i class="devicon-figma-plain"></i>Figma</span>
+          <div class="tech-marquee-group">
+            <span><i class="devicon-javascript-plain"></i>JavaScript</span>
+            <span><i class="devicon-react-original"></i>React</span>
+            <span><i class="devicon-nodejs-plain"></i>Node.js</span>
+            <span><i class="devicon-mongodb-plain"></i>MongoDB</span>
+            <span><i class="devicon-html5-plain"></i>HTML</span>
+            <span><i class="devicon-css3-plain"></i>CSS</span>
+            <span><i class="devicon-git-plain"></i>Git</span>
+            <span><i class="devicon-figma-plain"></i>Figma</span>
+          </div>
+          <div class="tech-marquee-group" aria-hidden="true">
+            <span><i class="devicon-javascript-plain"></i>JavaScript</span>
+            <span><i class="devicon-react-original"></i>React</span>
+            <span><i class="devicon-nodejs-plain"></i>Node.js</span>
+            <span><i class="devicon-mongodb-plain"></i>MongoDB</span>
+            <span><i class="devicon-html5-plain"></i>HTML</span>
+            <span><i class="devicon-css3-plain"></i>CSS</span>
+            <span><i class="devicon-git-plain"></i>Git</span>
+            <span><i class="devicon-figma-plain"></i>Figma</span>
+          </div>
         </div>
       </div>
 
       <section class="section about-section" id="about">
         <div class="section-wrap">
           <div class="section-title reveal">
-            <span>Get to know me</span>
-            <h2>ABOUT</h2>
+            <h2>Get to know me</h2>
           </div>
 
           <div class="about-layout">
@@ -121,6 +133,10 @@
                   <strong>UI &amp; Thoughtful Design</strong>
                   <span>Simple layouts with clarity, personality, and care.</span>
                 </div>
+                <div>
+                  <strong>Accessible Interfaces</strong>
+                  <span>Semantic HTML, keyboard navigation, clear focus states, strong contrast, and readable responsive layouts.</span>
+                </div>
               </div>
             </article>
 
@@ -138,10 +154,11 @@
                 <div><i class="devicon-git-plain"></i><span>Git</span></div>
                 <div><i class="devicon-github-original"></i><span>GitHub</span></div>
                 <div><i class="devicon-figma-plain"></i><span>Figma</span></div>
+                <div class="accessibility-skill"><strong aria-hidden="true">A11y</strong><span>Accessibility</span></div>
               </div>
               <div class="about-stats">
-                <div><strong>3</strong><span>Featured projects</span></div>
-                <div><strong>11</strong><span>Tools explored</span></div>
+                <div><strong>10+</strong><span>Projects built</span></div>
+                <div><strong>12</strong><span>Skills explored</span></div>
                 <div><strong>∞</strong><span>Curiosity</span></div>
               </div>
             </aside>
@@ -152,8 +169,7 @@
       <section class="section projects-section" id="projects">
         <div class="section-wrap">
           <div class="section-title reveal">
-            <span>Things I have built</span>
-            <h2>PROJECTS</h2>
+            <h2>Things I have built</h2>
           </div>
 
           <div class="project-grid">
@@ -161,25 +177,48 @@
               <a href="https://voice-for-her-frontend.vercel.app" target="_blank" rel="noreferrer">
                 <img src="img/voice for her.png" alt="Voice For Her website" />
                 <div class="project-info">
-                  <div><span>React project</span><h3>Voice For Her</h3></div>
+                  <div class="project-copy">
+                    <span>Awareness platform · React</span>
+                    <h3>Voice For Her</h3>
+                    <p>
+                      A platform created to raise awareness, amplify
+                      women&apos;s voices, and make important stories easier to
+                      discover and understand.
+                    </p>
+                  </div>
                   <span class="project-arrow">↗</span>
                 </div>
               </a>
             </article>
             <article class="project-card reveal">
-              <a href="https://velora-hair.vercel.app" target="_blank" rel="noreferrer">
-                <img src="img/velora hair.png" alt="Velora Hair ecommerce website" />
+              <div class="project-link">
+                <img src="img/velora hair.png" alt="Temporary placeholder for the Small Business Assistant project" />
                 <div class="project-info">
-                  <div><span>Ecommerce · In progress</span><h3>Velora Hair</h3></div>
-                  <span class="project-arrow">↗</span>
+                  <div class="project-copy">
+                    <span>Small business tool · In progress</span>
+                    <h3>Small Business Assistant</h3>
+                    <p>
+                      A voice-powered tool designed to help small businesses
+                      attract customers, manage bookings, and create invoices
+                      quickly in one place.
+                    </p>
+                  </div>
                 </div>
-              </a>
+              </div>
             </article>
             <article class="project-card reveal">
               <a href="https://yordiemma.github.io/Trip-Finder/" target="_blank" rel="noreferrer">
                 <img src="img/weeked in stock.png" alt="Weekend in Stockholm trip planner" />
                 <div class="project-info">
-                  <div><span>React · API · CRUD</span><h3>Weekend in Stockholm</h3></div>
+                  <div class="project-copy">
+                    <span>Weekend planner · React · API</span>
+                    <h3>Weekend in Stockholm</h3>
+                    <p>
+                      A weekend-planning app for discovering activities,
+                      filtering ideas by day or vibe, saving personal plans,
+                      and checking live Stockholm weather.
+                    </p>
+                  </div>
                   <span class="project-arrow">↗</span>
                 </div>
               </a>
@@ -207,6 +246,12 @@
     <footer>
       <a class="brand" href="#home">Yordanos <span>Agafari</span></a>
       <p>&copy; <span id="year"></span> Yordanos Agafari</p>
+      <p class="design-credit">
+        Design inspiration:
+        <a href="https://dpalomeras.dev/" target="_blank" rel="noreferrer">
+          Dickson Palomeras
+        </a>
+      </p>
       <a href="#home">Back to top ↑</a>
     </footer>
 
