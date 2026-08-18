@@ -17,8 +17,9 @@ and selected frontend and full-stack projects.
 
 ## Featured Projects
 
-- [SafeTap](https://github.com/Yordiemma/safe-tap) — An in-development React
-  Native personal safety app powered by Supabase.
+- [SafeTap](https://github.com/Yordiemma/safe-tap) — An accessible React Native
+  safety app that helps people request support without speaking. Users choose a
+  visual emergency alert and share their real location with trusted contacts.
 - [Voice For Her](https://voice-for-her-frontend.vercel.app) — A React awareness
   platform created to amplify women's voices.
 - [Glow Market](https://glow-market-delta.vercel.app) — A full-stack marketplace
