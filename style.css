@@ -658,6 +658,12 @@ button:focus-visible {
   font-weight: 700;
 }
 
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.25rem;
+}
+
 /* Contact */
 .contact-section {
   min-height: 58vh;
