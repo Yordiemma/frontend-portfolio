@@ -23,11 +23,13 @@ This project is a single-page portfolio. The fixed navigation scrolls to:
 - Voice For Her
   https://voice-for-her-frontend.vercel.app
 
-- Velora Hair
-  https://velora-hair.vercel.app
+- Glow Market
+  https://glow-market-delta.vercel.app
 
 - Weekend in Stockholm
   https://yordiemma.github.io/Trip-Finder/
+
+- Kaldi's Coffee Trail (VR experience)
 
 ## Getting Started
 
