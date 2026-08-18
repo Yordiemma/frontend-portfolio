@@ -1,48 +1,39 @@
-# Yordanos Agafari Portfolio
+# Yordanos Agafari — Developer Portfolio
 
-Personal portfolio website made to share my work, my story, and my contact information.
+A responsive single-page portfolio presenting my background, technical skills,
+and selected frontend and full-stack projects.
 
-## Overview
+## Built With
 
-This project is a single-page portfolio. The fixed navigation scrolls to:
-
-- Home
-- About
-- Skills
-- Projects
-- Contact
-
-## Tech Stack
-
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 
 ## Featured Projects
 
-- Voice For Her
-  https://voice-for-her-frontend.vercel.app
+- [SafeTap](https://github.com/Yordiemma/safe-tap) — An in-development React
+  Native personal safety app powered by Supabase.
+- [Voice For Her](https://voice-for-her-frontend.vercel.app) — A React awareness
+  platform created to amplify women's voices.
+- [Glow Market](https://glow-market-delta.vercel.app) — A full-stack marketplace
+  for beauty businesses.
+- [Weekend in Stockholm](https://yordiemma.github.io/Trip-Finder/) — A React
+  weekend planner using live API data.
+- [Kaldi's Coffee Trail](https://github.com/Yordiemma/CoffeeVR) — An interactive
+  WebXR storytelling experience.
 
-- Glow Market
-  https://glow-market-delta.vercel.app
+## Run Locally
 
-- Weekend in Stockholm
-  https://yordiemma.github.io/Trip-Finder/
+Clone the repository and open `index.html` in a browser. No installation or
+build step is required.
 
-- Kaldi's Coffee Trail (VR experience)
+```bash
+git clone https://github.com/Yordiemma/frontend-portfolio.git
+cd frontend-portfolio
+open index.html
+```
 
-## Getting Started
+## Contact
 
-To open the project locally:
-
-1. Clone the repository
-2. Open `index.html` in your browser
-
-## Author
-
-Yordanos Agafari
-
-## Connect
-
-- GitHub: https://github.com/Yordiemma
-- LinkedIn: https://www.linkedin.com/in/yordanos-agafari-2636a5240/
+- [GitHub](https://github.com/Yordiemma)
+- [LinkedIn](https://www.linkedin.com/in/yordanos-agafari-2636a5240/)
