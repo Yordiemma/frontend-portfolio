@@ -3,11 +3,17 @@
 A responsive single-page portfolio presenting my background, technical skills,
 and selected frontend and full-stack projects.
 
-## Built With
+## Skills & Technologies
 
-- HTML5
-- CSS3
-- JavaScript
+- JavaScript and TypeScript
+- React and Next.js
+- React Native
+- Tailwind CSS
+- Node.js and REST APIs
+- PHP and MySQL
+- Supabase
+- Git and GitHub
+- Figma
 
 ## Featured Projects
 
