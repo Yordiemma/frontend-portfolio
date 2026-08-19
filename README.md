@@ -28,7 +28,8 @@ and selected frontend and full-stack projects.
 - [Weekend in Stockholm](https://yordiemma.github.io/Trip-Finder/) — A React
   weekend planner using live API data.
 - [Kaldi's Coffee Trail](https://github.com/Yordiemma/CoffeeVR) — An interactive
-  WebXR storytelling experience.
+  WebVR story about the discovery of coffee in Ethiopia. It was a challenging
+  school project that I am proud of and plan to improve as I learn more.
 
 ## Run Locally
 
