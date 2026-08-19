@@ -17,9 +17,10 @@ and selected frontend and full-stack projects.
 
 ## Featured Projects
 
-- [SafeTap](https://github.com/Yordiemma/safe-tap) — An accessible React Native
-  safety app that helps people request support without speaking. Users choose a
-  visual emergency alert and share their real location with trusted contacts.
+- [SafeTap](https://website-yordiemmas-projects.vercel.app/) — An accessible React Native
+  safety app for people with disabilities who may have difficulty speaking or
+  hearing. It uses clear images and visual signs to communicate an emergency
+  and share the user's location with trusted contacts.
 - [Voice For Her](https://voice-for-her-frontend.vercel.app) — A React awareness
   platform created to amplify women's voices.
 - [Glow Market](https://glow-market-delta.vercel.app) — A full-stack marketplace
